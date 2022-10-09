@@ -1,31 +1,32 @@
 '''
 Elaborar un programa que permita realizar una conversión de monedas, sea esta de dólar a colon o viceversa, considere al menos 3 conversiones (Bitcoin) diferentes y permita al usuario seleccionar que conversión desea hacer mediante un menú.
 '''
-COLONDOLAR = 8.56
-BITCOINDOLAR = 20000
-DOLARBITCOIN = 0.00005017
+COLONDOLAR = 8.80
+BITCOINDOLAR = 19385.35
+DOLARBITCOIN = 0.00005200
+COLONBITCOIN = 0.00000590
 
 def cambioDolarC(dolares):
-    colon = dolares * COLONDOLAR
+    colon = float(dolares * COLONDOLAR)
     return colon
 def cambioColonD(colones):
-    dolares = colones / COLONDOLAR
+    dolares = float(colones / COLONDOLAR)
     return dolares
 def cambioDolarB(dolares):
-    bitcoin = dolares * DOLARBITCOIN
+    bitcoin = float(dolares / BITCOINDOLAR)
     return bitcoin
 def cambioBitcoinD(bitcoin):
-    dolar = bitcoin / DOLARBITCOIN
+    dolar = float(bitcoin * BITCOINDOLAR)
     return dolar
 def cambioColonB(colones):
-    bitcoin = colones / BITCOINDOLAR
+    bitcoin = float(colones * COLONBITCOIN)
     return bitcoin
 def cambioBitcoinC(bitcoin):
-    colon = bitcoin * BITCOINDOLAR
+    colon = float(bitcoin / COLONBITCOIN)
     return colon
 
 def solicCantidad(tipo):
-    cantidad = float(input(f'¿Cuánta cantidad de {tipo} vas a cambiar?'))
+    cantidad = float(input(f'¿Cuánta cantidad de {tipo} vas a cambiar?: '))
     return cantidad
 
 if __name__ == '__main__':
@@ -44,46 +45,28 @@ if __name__ == '__main__':
         opcion = int(input(menu))
         if opcion == 1:
             cantidad = solicCantidad('dólares')
-            colon = round(cambioDolarC(cantidad),2)
-            print(f'El resultado de cambiar {cantidad} dólares es de {colon} colones')
+            colon = cambioDolarC(cantidad)
+            print('El resultado de cambiar: $',cantidad,' dólares es de: ', round(colon,2),' colones')
         elif opcion == 2:
             cantidad = solicCantidad('colones')
-            dolar = round(cambioColonD(cantidad),2)
-            print(f'El resultado de cambiar {cantidad} colones es de {dolar} dólares')
-
+            dolar = cambioColonD(cantidad)
+            print('El resultado de cambiar: ',cantidad,' colones es de: $',round(dolar,2),' dólares')
         elif opcion == 3:
             cantidad = solicCantidad('dólares')
-            bitcoin = cambioColonD(cantidad)
-            print(f'El resultado de cambiar {cantidad} dólares es de {bitcoin} bitcoins')
-
+            bitcoin = cambioDolarB(cantidad)
+            print('El resultado de cambiar: $',cantidad,' dólares es de: ', round(bitcoin,8),' bitcoins')
         elif opcion == 4:
             cantidad = solicCantidad('bitcoin')
-            dolar = round(cambioColonD(cantidad),2)
-            print(f'El resultado de cambiar {cantidad} bitcoins es de {dolar} dólares')
-            
+            dolar = cambioBitcoinD(cantidad)
+            print('El resultado de cambiar: ',cantidad,' bitcoins es de: $', round(dolar,2),' dólares')
         elif opcion == 5:
             cantidad = solicCantidad('colones')
-            bitcoin = round(cambioColonD(cantidad),8)
-            print(f'El resultado de cambiar {cantidad} colones es de {bitcoin} bitcoins')
+            bitcoin = cambioColonB(cantidad)
+            print('El resultado de cambiar: ', cantidad,' colones es de: ', round(bitcoin,8),' bitcoins')
         elif opcion == 6:
             cantidad = solicCantidad('bitcoin')
-            colon = round(cambioColonD(cantidad),2)
-            print(f'El resultado de cambiar {cantidad} bitcoins es de {colon} colones')
-        else:
+            colon = cambioBitcoinC(cantidad)
+            print('El resultado de cambiar: ',cantidad,' bitcoins es de: ', round(colon,2),' colones')
+        elif opcion == 7:
             print('Hasta pronto!')
             break
-# ya asi seguir agregando los datos al while
-
-
-
-
-
-""" colonSv = input('Por favor, ingrese ingrese la cantidad de colones a convertir: ')
-colonSv = float(colonSv)
-dolar = 8.56
-
-dolares = colonSv / dolar
-dolares = round(dolares,2)
-
-dolares = str(dolares) #
-print('Ud. dispone de US$ ' + dolares + ' dólares') """
