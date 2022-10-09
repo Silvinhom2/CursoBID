@@ -19,3 +19,4 @@ else:
     print('Hola ', nombre)
     print('Su DUI: ', dui)
     print('Su salario a remunerar es: ', pay)
+    
