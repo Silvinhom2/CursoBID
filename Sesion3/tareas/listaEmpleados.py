@@ -14,26 +14,32 @@ Crear el siguiente menú
 para cada empleado construir un diccionario que se irá agregando a una lista que será impresa con la opción 2 del menú (usar for)
 '''
 
+
 menu = '''
     1. Agregar empleado
     2. Imprimir lista
     3. Salir
 '''
 listaEmpleados = []
+def listarEmpleados(*nombres):
+    for nombre in nombres:
+        print(nombre)
 
-i=0
-while i<1:
-    empleado = ()
-    opcion = int(input(menu))
+listarEmpleados('pedro', 'juan', 'lucas', 'simon', 'santiago')
 
-    if opcion == 1:
-        empleado['nombre'] = input("Escriba el nombre: ")
-        empleado['cargo'] = input("Escriba el cargo: ")
-        empleado['sueldo'] = float(input("Escriba el sueldo: "))
-        listaEmpleados.append(empleado)
-    elif opcion == 2:
-        print('Mostrando lista de empleados:')
-        for l_e in listaEmpleados:
-            print(f"Nombre: {l_e['nombre']}\n Cargo:  {l_e['cargo']}\n Sueldo: {l_e['sueldo']}")
-    else:
-        i+=1
+# i=0
+# # while i<1:
+#     empleado = ()
+#     opcion = int(input(menu))
+
+#     if opcion == 1:
+#         empleado['nombre'] = input("Escriba el nombre: ")
+#         empleado['cargo'] = input("Escriba el cargo: ")
+#         empleado['sueldo'] = float(input("Escriba el sueldo: "))
+#         listaEmpleados.append(empleado)
+#     elif opcion == 2:
+#         print('Mostrando lista de empleados:')
+#         for l_e in listaEmpleados:
+#             print(f"Nombre: {l_e['nombre']}\n Cargo:  {l_e['cargo']}\n Sueldo: {l_e['sueldo']}")
+#     else:
+#         i+=1
