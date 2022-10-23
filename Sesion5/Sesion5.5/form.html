@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario HTML</title>
+</head>
+<body>
+    <h1>Rigistrarse</h1>
+    <fieldset>
+        <legend>Mi Formulario</legend>
+        <form action="usuario/login" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="usuario">Usuario:</label>
+                <input type="text" name="usuario" id="usuario">
+            </div>
+            <div>
+                <label for="mail">Correo</label>
+                <input type="email" name="mail" id="mail">
+            </div>
+            <div>
+                <label for="clave">Clave</label>
+                <input type="password" name="calve" id="clave">
+            </div>
+            <div>
+                <label for="foto">Subir fotografía</label>
+                <input type="file" name="foto" id="foto">
+            </div>
+            <div>
+                <label for="genero">Género:
+                </label>
+                <input type="radio" name="genero" id="genero1" value="M">Masculino
+                <input type="radio" name="genero" id="genero2" value="F">Femenino
+            </div>
+            <div>
+                <label for="pais">País</label>
+                <select name="pais" id="pais">
+                    <option value="sv">El Salvador</option>
+                    <option value="us" selected>Estados Unidos</option>
+                    <option value="uk">Reino Unido</option>
+                </select>
+            </div>
+            <div>
+                <label for="hobby">Hobby:
+                </label>
+                <input type="checkbox" name="hobby id="hobby1" value="1">Fútbol
+                <input type="checkbox" name="hobby" id="hobby" value="2">Beisbol
+            </div>
+            <div>
+                <label for="direccion">Dirección</label>
+                <textarea name="direccion" id="direccion" cols="30" rows="5"></textarea>
+            </div>
+            <input type="submit" value="Enviar datos">
+        </form>
+    </fieldset>
+</body>
+</html>
