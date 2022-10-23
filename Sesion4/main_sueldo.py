@@ -25,3 +25,4 @@ while(op>0 and op<7):
     os.system('cls||clear')
     print(MENU)
     op = int(input('Digite opción: '))
+    

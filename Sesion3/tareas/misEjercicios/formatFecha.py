@@ -7,7 +7,8 @@
     %M Minutos
     %S segundos
 
-Algo que en lo particular me gusta hacer es definir una función que me permita obtener un formato mucho más amigable.'''
+Algo que en lo particular me gusta hacer es definir una función que me permita obtener un formato mucho más amigable.
+'''
 
 from datetime import datetime
 

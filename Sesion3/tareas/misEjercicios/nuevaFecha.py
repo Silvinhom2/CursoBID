@@ -19,4 +19,3 @@ print(nuevaFecha)
 #Comparación
 if ahorita < nuevaFecha:
     print("La fecha actual es menor que la nueva fecha")
-    
