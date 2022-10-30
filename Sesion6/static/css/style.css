@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+}
+.login {
+    border: 1px solid gray;
+    min-width: 30%; min-width: 200px;
+    border-radius: 20px;
+    margin: 55px auto;
+    padding: 30px;
+}
+.user {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.titulo {
+    text-align: center;
+    font-style: italic;
+}
+.etiquet, .textbox, .btn-submit, .olvidarclave {
+    display: block;
+    margin-bottom: 10px;
+}
+.textbox {
+    width: 100%;
+    padding: 5px 0px;
+}
+.btn-submit {
+    background-color: #1d8097;
+    color: #fff;
+    border: none;
+    padding: 10px;
+}
+.btn-submit:hover {
+    background-color: #155d74;
+    cursor: pointer;
+}
+.olvidarclave {
+    text-align: right;
+    text-decoration: none;
+}
+.header {
+    background-color: #1d8097;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.header a{
+    text-decoration: none;
+    color: #fff;
+    padding: 20px 15px;
+    font-size: 16px;
+    display: block;
+    float: left;
+}
+.header a:hover {
+    background-color: #155d74;
+    cursor: pointer;
+}
+.header a.activo {
+    background-color: #155d74;
+}
+
+.footer {
+    background-color: #1d8097;
+    height: 90px;
+    text-align: center;
+    color: white;
+}
+
+@media screen and (max-width: 480px){
+    .user {
+        display: none;
+        padding-top: 95px;
+    }
+}
