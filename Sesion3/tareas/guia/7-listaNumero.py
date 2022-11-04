@@ -4,9 +4,9 @@ promedio de todos'''
 
 lista = []
 def numeroIng():
-    
+
     while True:
-        numIng = int(input("Ingresa cualquier numero (0 para terminar): "))
+        numIng = int(input("Ingresa cualquier numero o (0 para terminar): "))
         if numIng == 0:
             break
         else:
@@ -16,6 +16,9 @@ def numeroIng():
 def mayorMenor(lista): 
     mayor=0
     menor=999999
+    suma = 0
+    promedio = 0
+    numero = 0
 
     for numero in lista:
 
@@ -24,26 +27,14 @@ def mayorMenor(lista):
 
         if numero<menor:
             menor=numero
-    return mayor,menor
+        
+        suma = suma + numero
 
-#def orden(lista2):
-    lista2 = numeroIng()
-    numero = 0
-    for numero in lista2:
-        valor = numeroIng()
-        lista2.append(valor)
-    print('Lista sin ordenar')
-    print(lista2)
-    for numero in lista2:
-        if lista2[numero] > lista2[numero + 1]:
-            reord = lista2[numero]
-            lista2[numero] = lista2[numero + 1]
-            lista2[numero + 1] = reord
-    print('Lista ordenada')
-    print(lista2)
+        promedio = suma / numero
 
 
-mayor,menor = mayorMenor(numeroIng())
-#listaOrd = orden(numeroIng())
-#print(f'Lista ordenada {listaOrd} ')
-print(f"mayor={mayor},menor={menor}, la sumatoria y el promedio de todos es: ")
+    return menor, mayor, suma, promedio
+
+
+menor,mayor,suma, promedio = mayorMenor(numeroIng())
+print(f"El número menor es el: {menor}, el mayor es el: {mayor}, la suma de todos es: {suma} y el promedio es: {promedio} ")

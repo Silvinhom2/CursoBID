@@ -1,8 +1,8 @@
 '''Calcular la potencia de un número usando estructuras repetitivas, considere negativos y potencia
 0'''
 
-base = int(input('Ingrese la base de la ecuación: '))
-exponencia = int(input('Ingrese el exponente de la ecuación: '))
+base = int(input('Ingrese el número base: '))
+exponencia = int(input('Ingrese el exponente: '))
 
 def potencia(base, exponencia):
     resultado = 1
@@ -16,4 +16,3 @@ def potencia(base, exponencia):
 #print(pow(4,3))
 #print(potencia(4,3))
 print(f'La potencia de {base} elevada a la {exponencia} es de: {potencia(base,exponencia)}')
-#print(potencia(base,exponencia))
