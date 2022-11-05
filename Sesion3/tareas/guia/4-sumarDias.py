@@ -1,19 +1,18 @@
 '''programa que solicite una fecha (día, mes, año) y una cantidad de días, elabore algoritmo para
 sumar días a la fecha capturada'''
-'''
+
+
 dia = int(input('Ingrese el DÍA actual. [Ej: 31]: '))
 mes = int(input('Ingrese el MES actual. [Ej: 12]: '))
 anio = int(input('Ingrese el AÑO actual. [Ej: 1990]: '))
 
-#addDay = int(input('Ingrese los días que desea avanzar: '))
-#newDay = dia + addDay
-'''
+addDay = int(input('Ingrese los días que desea avanzar: '))
+newDay = dia + addDay
 
 
-
-'''
-def fechaPropuesta(anio,mes,newDay):
+def fechaPropuesta(anio,mes,dia):
     bisiesto = False
+    dias = newDay
 
     if anio % 400 == 0:
         bisiesto = True
@@ -30,19 +29,21 @@ def fechaPropuesta(anio,mes,newDay):
     else:
         dias_mes = 30
 
-    if dia < dias_mes:
+    if dias < dias_mes:
         dia += 1
+        dias = dia + newDay
     else:
-        newDay = 1
+        dia = 1 + dias
         if mes == 12:
             mes = 1
             anio += 1
         else:
             mes += 1
+        
+   # newdate = print(f' Fecha prevista: {dia}, {mes}, {anio} ')
     
-    return (newDay, mes, anio)
+    return (dia, mes, anio)
 
-print(fechaPropuesta(2020,1,15))
-print(fechaPropuesta(2020,1,31))
-#print(fechaPropuesta(anio,mes,newDay))
-'''
+#print(fechaPropuesta(2020,1,15))
+#print(fechaPropuesta(2020,1,31))
+print(fechaPropuesta(anio, mes, dia))
