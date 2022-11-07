@@ -1,0 +1,23 @@
+{% extends 'layout/base.html' %}
+{% block titulo %}
+    persona
+{% endblock %}
+{% block contenido %}
+    {% if nombre %}
+        <h1>Datos enviados</h1>
+        <b>Nombre: </b>{{ nombre }}
+        <b>Edad: </b>{{ edad }}
+    {% else %}
+        <form action="{{ url_for('persona') }}" method="post">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+            <div>
+                <label for="edad">Edad:</label>
+                <input type="text" name="edad" id="edad">
+            </div>
+            <input type="submit" value="Enviar">
+        {% endif %}
+    </form>
+{% endblock %}
