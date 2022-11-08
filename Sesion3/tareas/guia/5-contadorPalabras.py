@@ -13,3 +13,4 @@ for palabra in listaPalabras:
 
 for campo,valor in dict.items():
 	print (campo," -> ",valor)
+	

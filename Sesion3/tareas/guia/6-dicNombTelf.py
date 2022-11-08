@@ -10,13 +10,13 @@ def contacto(dicc = {}):
         diccionario = dicc
 
     
-    seguir = int(input('''
+    seguir = input('''
             MENÚ
         1 => Continuar
-        2 => Salir
-    '''))
-    salir = 2
-    if seguir == 1:
+        * => Salir
+    ''')
+    salir = '*'
+    if seguir == '1':
         nombre = input("Inserte nombre: ")
         if nombre in diccionario:
             print("Numero actual: ",diccionario[nombre])
@@ -34,7 +34,10 @@ def contacto(dicc = {}):
             diccionario.update({nombre : numero})
             print("Agregado a la agenda!")
             return contacto(diccionario)
-    elif seguir == 2:
-        exit(salir)
+    elif seguir == salir:
+        exit()
+    else:
+        print('Presione el índice solicitado')
+        contacto()
 
 contacto()

@@ -1,4 +1,5 @@
-'''programa que solicite una fecha (día, mes, año) y una cantidad de días, elabore algoritmo para
+'''programa que solicite una fecha (día, mes, año) y una cantidad de días.
+Elabore algoritmo para
 sumar días a la fecha capturada'''
 
 
@@ -47,3 +48,7 @@ def fechaPropuesta(anio,mes,dia):
 #print(fechaPropuesta(2020,1,15))
 #print(fechaPropuesta(2020,1,31))
 print(fechaPropuesta(anio, mes, dia))
+
+'''Aún me faltó hacerlo funcionar para que me diera la fecha actual.
+Me dolió la cabeza y ya no lo continué Xb
+Me estaba atrasando con el avance de los demás'''

@@ -12,7 +12,4 @@ def potencia(base, exponencia):
 
     return resultado
 
-#print(4**3)
-#print(pow(4,3))
-#print(potencia(4,3))
 print(f'La potencia de {base} elevada a la {exponencia} es de: {potencia(base,exponencia)}')
