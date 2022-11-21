@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Empleado</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h2>Lista de empleados</h2>
+        <a href="{% url 'empleados_app:crear-empleado' %} " class="btn btn-secundary">Nuevo empleado</a><br><br>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Sueldo</th>
+                    <th>Cargo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for e in lista_empleados %} 
+                    <tr>
+                        <td>{{e.id}}</td><td>{{e.nombre}}</td><td>{{e.sueldo}}</td><td>{{e.cargo.cargo}}</td>
+                <td><a href="{% url 'empleados_app:modifciar-empleado' e.id %}">Modificar</a>
+                | <a href="{% url 'empleados_app:eliminar-empleado' e.id %}">Eliminar</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,9 +1,12 @@
 from django.db import models
 
 # Create your models here.
-class Cargo(models.Moldel):
+class Cargo(models.Model):
     idcargo = models.IntegerField(primary_key=True) # definicion de llave primaria
-    Cargo = models.CharField('Cargo', max_length=60)
+    cargo = models.CharField('Cargo', max_length=60)
+
+    def __str__(self):
+        return self.cargo
 
 class Empleado(models.Model):
     nombre = models.CharField('Nombre', max_length=60)

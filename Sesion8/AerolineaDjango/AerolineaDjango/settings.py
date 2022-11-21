@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dbaerolinea',
         'USER': 'root',
-        'PASSWORD': '##### cambiar a la hora de usar #####',
+        'PASSWORD': 'srmmSQL90.,',
         'HOST': 'localhost',
         'PORT': '3306',
     }
