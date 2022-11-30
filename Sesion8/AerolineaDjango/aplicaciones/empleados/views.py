@@ -2,6 +2,27 @@ from django.shortcuts import render
 from .models import Empleado, Cargo
 from django.views.generic import (ListView,CreateView,UpdateView,DeleteView)
 from django.urls import reverse_lazy
+from rest_framework.generics import (ListAPIView, CreateAPIView, RetrieveAPIView, DestroyAPIView, RetrieveUpdateAPIView, UpdateAPIView, RetrieveDestroyAPIView)
+from .serializer import EmpleadoSerializaer, CargoSerializaer, ProyectoSerializaer
+
+# API Viesws
+class ListaAPIEmpleado(ListAPIView):
+    serializer_class = EmpleadoSerializaer
+    queryset = Empleado.objects.all()
+class CrearAPIEmpleado(CreateAPIView):
+    serializer_class = EmpleadoSerializaer
+class EliminarAPIEmpleado(DestroyAPIView):
+    serializer_class = EmpleadoSerializaer
+    queryset = Empleado.objects.all()
+class EliminarAPIEmpleado(RetrieveAPIView):
+    serializer_class = EmpleadoSerializaer
+    queryset = Empleado.objects.all()
+class EliminarAPIEmpleado(RetrieveUpdateAPIView):
+    serializer_class = EmpleadoSerializaer
+    queryset = Empleado.objects.all()
+class EliminarAPIEmpleado(DestroyAPIView):
+    serializer_class = EmpleadoSerializaer
+    queryset = Empleado.objects.all()
 
 # Create your views here.
 def index(request):

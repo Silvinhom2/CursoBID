@@ -25,7 +25,7 @@
                 {% for e in lista_empleados %} 
                     <tr>
                         <td>{{e.id}}</td><td>{{e.nombre}}</td><td>{{e.sueldo}}</td><td>{{e.cargo.cargo}}</td>
-                <td><a href="{% url 'empleados_app:modifciar-empleado' e.id %}">Modificar</a>
+                <td><a href="{% url 'empleados_app:modificar-empleado' e.id %}">Modificar</a>
                 | <a href="{% url 'empleados_app:eliminar-empleado' e.id %}">Eliminar</a></td>
                     </tr>
                 {% endfor %}

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'aplicaciones.inicio',
     'aplicaciones.login',
     # aplicaciones externas
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
