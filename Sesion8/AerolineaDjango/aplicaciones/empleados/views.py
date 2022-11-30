@@ -2,26 +2,26 @@ from django.shortcuts import render
 from .models import Empleado, Cargo
 from django.views.generic import (ListView,CreateView,UpdateView,DeleteView)
 from django.urls import reverse_lazy
-from rest_framework.generics import (ListAPIView, CreateAPIView, RetrieveAPIView, DestroyAPIView, RetrieveUpdateAPIView, UpdateAPIView, RetrieveDestroyAPIView)
-from .serializer import EmpleadoSerializaer, CargoSerializaer, ProyectoSerializaer
+from rest_framework.generics import (ListAPIView, CreateAPIView, RetrieveAPIView, DestroyAPIView, UpdateAPIView, RetrieveUpdateAPIView)
+from .serializer import EmpleadoSerializer, EmpleadoAllSerializer
 
 # API Viesws
 class ListaAPIEmpleado(ListAPIView):
-    serializer_class = EmpleadoSerializaer
+    serializer_class = EmpleadoAllSerializer
     queryset = Empleado.objects.all()
 class CrearAPIEmpleado(CreateAPIView):
-    serializer_class = EmpleadoSerializaer
+    serializer_class = EmpleadoSerializer
 class EliminarAPIEmpleado(DestroyAPIView):
-    serializer_class = EmpleadoSerializaer
+    serializer_class = EmpleadoSerializer
     queryset = Empleado.objects.all()
-class EliminarAPIEmpleado(RetrieveAPIView):
-    serializer_class = EmpleadoSerializaer
+class ObtenerAPIEmpleado(RetrieveAPIView):
+    serializer_class = EmpleadoSerializer
     queryset = Empleado.objects.all()
-class EliminarAPIEmpleado(RetrieveUpdateAPIView):
-    serializer_class = EmpleadoSerializaer
+class ModificarAPIEmpleado(RetrieveUpdateAPIView):
+    serializer_class = EmpleadoSerializer
     queryset = Empleado.objects.all()
-class EliminarAPIEmpleado(DestroyAPIView):
-    serializer_class = EmpleadoSerializaer
+class Modificar2APIEmpleado(UpdateAPIView):
+    serializer_class = EmpleadoSerializer
     queryset = Empleado.objects.all()
 
 # Create your views here.

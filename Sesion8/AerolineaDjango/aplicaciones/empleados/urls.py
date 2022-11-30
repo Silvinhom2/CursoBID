@@ -30,5 +30,21 @@ urlpatterns = [
     path(
         'api/empleados/crear',
         views.CrearAPIEmpleado.as_view(),
-        name='crear-api-empleado')
+        name='crear-api-empleado'),
+    path(
+        'api/empleados/obtener/<pk>/',
+        views.ModificarAPIEmpleado.as_view(),
+        name='obtener-api-empleado'),
+    path(
+        'api/empleados/modificar/<pk>/',
+        views.ModificarAPIEmpleado.as_view(),
+        name='modificar-api-empleado'),
+    path(
+        'api/empleados/modificar2/<pk>/',
+        views.Modificar2APIEmpleado.as_view(),
+        name='modificar2-api-empleado'),
+    path(
+        'api/empleados/eliminar/<pk>/',
+        views.EliminarAPIEmpleado.as_view(),
+        name='eliminar-api-empleado')
 ] 
